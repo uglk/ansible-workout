@@ -1,0 +1,13 @@
+# Ansible playbook to install apche server on ubuntu servers
+# ansible-playbook apache-install.yml
+- hosts: all
+  become: true
+  gather_facts: no
+
+  tasks:
+  - name: update the hosts
+    apt:
+      update_cache: yes
+  - name: install apache2 package
+    apt:
+      name: apache2
