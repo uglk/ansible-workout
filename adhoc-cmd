@@ -1,0 +1,9 @@
+- ansible all -m ping
+- ansible all --list-hosts
+- ansible all -m gather_facts
+- ansible all -m apt -a update_cache=true -b # run with sudo privilages
+- ansible all -m apt -a name=vim-nox -b 
+# apt search vim-nox
+- ansible all -m apt -a name=tree -b
+- ansible all -m apt -a "name=snapd state=latest" -b
+
